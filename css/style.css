@@ -7,23 +7,52 @@
 /* wrapper  */
 .wrapper{
     height: 100vh;
+    width: 100%;
 }
 
 /* inizio main  */
 main {
     height: calc(100vh - 100px);
+    position: relative;
 }
-
+/* nav-menu  */
 .nav-menu{
     background-color: #000000;
     float: left;
     height: calc(100vh - 100px);
-    width: calc(100% / 7);
+    width: calc(100% / 6);
+    overflow-y: auto;
 }
+
+.logo{
+    border: 1px solid white;
+    height: 10vh;
+}
+
+.menu{
+    border: 1px solid white;
+    height: calc((100% / 9) * 1 )
+}
+
+.playlist{
+    border: 1px solid white;
+    color: white;
+}
+
+.account{
+    border: 1px solid white;
+    height: calc((100% / 8) * 1 );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% / 6);
+}
+
+/* fine nav-menu  */
 
 .content{
     background-color: #141A22;
-    width: calc((100% / 7) * 6);
+    width: calc((100% / 6) * 5);
     float: left;
     height: calc(100vh - 100px);
 }
@@ -31,6 +60,7 @@ main {
 .upgrade{
     background-color: #080B13;
     height: 10vh;
+    z-index: 0;
 }
 
 /* fine main  */
@@ -39,6 +69,63 @@ main {
 footer {
     height: 100px;
     background-color: #282828;
+    z-index: 999;    
 }
 
 /* fine footer  */
+
+
+/* Media query  */
+
+@media (max-width: 600px) {
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .wrapper{
+        width: 600px;
+        /* height: 100vh; */
+    }
+
+    main {
+        height: calc(100vh - 100px);
+        position: relative;
+    }
+
+    .nav-menu{
+        background-color: #000000;
+        float: left;
+        width: calc(100% / 2.5);
+        overflow-y: auto;
+    }
+
+    .account{
+        height: calc((100% / 8) * 1 );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% / 2.5);
+    }
+
+    .content{
+        background-color: #141A22;
+        width: calc((100% / 2.5) * 1.5);
+        float: left;
+        height: calc(100vh - 100px);
+    }
+
+    .upgrade{
+        height: 10vh;
+    }
+
+    footer {
+        bottom: 0;
+        height: 100px;
+        background-color: #282828;
+        z-index: 999;    
+    }
+
+}
