@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* wrapper  */
+.wrapper{
+    height: 100vh;
+}
+
+/* inizio main  */
+main {
+    height: calc(100vh - 100px);
+}
+
+.nav-menu{
+    background-color: #000000;
+    float: left;
+    height: calc(100vh - 100px);
+    width: calc(100% / 7);
+}
+
+.content{
+    background-color: #141A22;
+    width: calc((100% / 7) * 6);
+    float: left;
+    height: calc(100vh - 100px);
+}
+
+.upgrade{
+    background-color: #080B13;
+    height: 10vh;
+}
+
+/* fine main  */
+
+/* inizio footer  */
+footer {
+    height: 100px;
+    background-color: #282828;
+}
+
+/* fine footer  */
