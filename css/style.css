@@ -11,6 +11,36 @@
     width: 100%;
 }
 
+/* hover  */
+.logo:hover{
+    cursor: pointer;
+}
+.icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.menu-top ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+.menu ul li:hover,
+.box-playlist:hover,
+.item span:hover,
+.playlist ul li:hover,
+.install,
+.user span:hover,
+.install span:hover,
+.user,
+.footer-left
+.far:hover,
+.play i:nth-of-type(1):hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* common  */
+
+
 /* inizio main  */
 main {
     position:relative;
@@ -37,6 +67,10 @@ main {
 .logo img {
     width: 65%;
     margin-left: 1em;
+}
+
+.logo-small{
+    visibility: hidden;
 }
 /* first menu home, search, library  */
 .menu{
@@ -81,7 +115,7 @@ li span{
 /* playlist  */
 .playlist {
     padding-top: 1em;
-    height: calc(100% - 290px);
+    height: calc(100% - 295px);
     min-height: 80px;
     color: white;
     overflow-y: auto;
@@ -101,8 +135,8 @@ li span{
     width: 40px;
     background-color: gray;
     text-align: center;
-    font-size: 2em;
-    font-weight: 800;
+    font-size: 2.2em;
+    font-weight: 500;
     color: black;
     margin-right: 0.4em;
 }
@@ -131,10 +165,14 @@ li span{
     color: #77797F;
 }
 
-.install span,
+.install span{
+    font-weight: 700;
+    font-size: 1.1em;
+}
 .user span{
     font-weight: 700;
     font-size: 1.1em;
+    color: white;
 }
 
 .user{
@@ -164,7 +202,7 @@ li span{
     align-items: center;
 }
 
-.icon {
+.icon-top {
     text-transform: uppercase;
     text-align: center;
     font-size: 0.7em;
@@ -175,11 +213,6 @@ li span{
     width: 15%;
     border-radius: 25px;
     margin-right: 2%;
-}
-
-.icon:hover {
-    transform: scale(1.2);
-    cursor: pointer;
 }
 
 /*  menu centrale nel main */
@@ -205,11 +238,6 @@ li span{
     border-bottom: 2px solid #ADFF2E;
 }
 
-.menu-top ul li:hover {
-    color: white;
-    cursor: pointer;
-}
-
 /* fine main  */
 
 /* inizio footer  */
@@ -229,12 +257,14 @@ footer {
 
 .footer-left,
 .footer-right {
-    width: 20%;
+    float: left;
+    width: 30%;
     display: flex;
     align-items: center;
     font-size: 0.6em;
     font-weight: 700;
     color: #77797F;
+    border: 1px solid white;
     height: 100%;
 }
 
@@ -258,16 +288,57 @@ footer {
     padding-left: 3em;
 }
 
+/* footer center  */
 .footer-center {
-    border: 3px solid white; /*  debug  */
     width: 40%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
 }
 
-.footer-right{
+.play,
+.time {
     display: flex;
     justify-content: space-between;
-    padding-left: 5em;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: white;
+    height: 100%; /*  debug  */
+}
+
+.play{
+    width: 35%;
+}
+.time{
+    width: 100%;
+}
+
+.play i:nth-of-type(3) {
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.play i:nth-of-type(3):hover {
+    transform: scale(1.5);
+}
+
+.barra{
+    border: 1px solid white;
+    border-radius: 8%;
+    width: 80%;
+}
+
+.time span{
+    font-size: 0.5em;
+    font-weight: 700;
+}
+/* footer center  */
+.footer-right{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 8%;
     padding-right: 1em;
 }
 
@@ -282,32 +353,3 @@ footer {
 }
 
 /* fine footer  */
-
-/*  Media query  */
-
-@media (max-width: 600px) {
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .wrapper{
-        max-width: 600px;
-    }
-
-    .nav-menu {
-        width: 70px;
-    }
-
-    .content {
-        width: calc(100% - 70px);
-    }
-
-    footer {
-        bottom: 0;
-        height: 90px;
-        z-index: 999;    
-    }
-
-}
