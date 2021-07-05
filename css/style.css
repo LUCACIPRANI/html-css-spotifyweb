@@ -110,7 +110,7 @@ main {
     line-height: 2;
     padding: 0.3em;
     padding-left: 0.8em;
-    border-left: 3px solid black;
+    border-left: 3px solid black; 
 
 }
 
@@ -118,12 +118,10 @@ main {
     color: white;
     border-left: 3px solid #ADFF2E;
 }
-
-li span{
+li span {
     padding-left: 0.7em;
 }
-
-.menu i{
+.menu i {
     font-size: 1.7em;
 }
 
@@ -166,7 +164,6 @@ li span{
 /* account  */
 .account {
     height: 90px;
-
 }
 
 .install,
@@ -233,6 +230,7 @@ li span{
 
 .icon-top:hover{
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 /*  menu centrale nel main */
@@ -257,12 +255,17 @@ li span{
     word-wrap: unset;
     padding: 1em;
     font-size: 0.9em;
-
 }
 
-.menu-top ul li:first-child {
-    border-bottom: 2px solid #ADFF2E;
-    height: 30px;
+.menu-top ul li p{
+    border: 1px solid #ADFF2E;
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.menu-top ul li:hover p{
+    transform: scale(1.5);
 }
 
 /* fine menu centrale nel main  */
@@ -287,34 +290,47 @@ li span{
 .element{
     float: left;
     padding-left: 0.5em;
-
+    position: relative;
+    height: 280px;
 }
 
 .longer{
     height: 280px;
 }
 
+.element i{
+    display: none;
+}
+
+.element:hover i {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    display: inline;
+}
 .element img {
     width: 180px;
     height: 180px;
     float: right;
     margin-bottom: 10px;
 }
-
+.element:hover img {
+    opacity: 0.4;
+}
 .element h3 {
     text-align: center;
     font-size: 1em;
 }
-
-.element p {
+.element p{
     font-size: 0.7em;
     font-weight: 700;
     color: #77797F;
     text-align: center;
     padding-top: 0.3em;
 }
-
-.circle .element img {
+.circle .element img{
     border-radius: 50%;
 }
 
@@ -347,7 +363,6 @@ footer {
     color: #77797F;
     height: 100%;
 }
-
 .footer-left img {
     width: 70px;
     padding: 1.4em;
@@ -356,7 +371,6 @@ footer {
     font-size: 1.8em;
     padding: 0.3em;
 }
-
 .melody span {
     display: block;  /* manda a capo il testo */
     font-size: 1.2em;
@@ -365,23 +379,38 @@ footer {
 .icons {
     padding-left: 3em;
 }
-
 .footer-right{
     display: flex;
     justify-content: space-around;
     padding-left: 8%;
     padding-right: 1em;
 }
-
 .footer-right .fas {
     font-size: 1.5em;
 }
-
 .bar {
     border: 1px solid white;
     border-radius: 5%;
     width: 50%;
 }
+
+/* .footer-right p{
+    position: absolute;
+    border: 1px solid #ADFF2E;
+    background-color: #ADFF2E;
+    border-radius: 20px;
+    width: 1%;
+    margin-right: 50px;
+}
+
+.bar i{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+ */
+
 
 /* footer center  */
 .footer-center {
@@ -390,7 +419,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
 .play,
 .time {
     display: flex;
@@ -399,13 +427,13 @@ footer {
     margin: 0 auto;
     font-size: 1.1em;
     color: white;
-    height: 100%; /*  debug  */
+    height: 100%;
 }
-
 .play{
     width: 35%;
 }
 .time{
+    position: relative;
     width: 90%;
 }
 
@@ -420,10 +448,27 @@ footer {
 
 .longer-bar{
     border: 1px solid white;
-    border-radius: 8%;
+    background-color: white;
+    border-radius: 20px;
     width: 80%;
 }
 
+.time p {
+    position: absolute;
+    border: 1px solid #ADFF2E;
+    background-color: #ADFF2E;
+    border-radius: 20px;
+    width: 15%;
+    margin: 10%;
+}
+.time i {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 25%;
+}
 .time span{
     font-size: 0.5em;
     font-weight: 700;
