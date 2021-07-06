@@ -121,7 +121,7 @@ li span {
     height: calc(100% - 295px);
     min-height: 100px;
     color: white;
-    overflow: auto;
+    overflow: hidden;
 }
 .item{
     display: flex;
@@ -140,13 +140,19 @@ li span {
     color: black;
     margin-right: 0.4em;
 }
+
+.playlist ul{
+    height: 90%;
+    min-height: 200px;
+    overflow: auto;
+}
+
 .playlist ul li{
     color: #77797F;
     font-weight: 600;
     font-size: 0.9em;
     list-style-type: none;
     line-height: 2.5;
-    overflow-y: auto;
 }
 
 /* account  */
@@ -411,48 +417,44 @@ footer {
 }
 
 /* Hover verde per barre player  */
-.green-bar{
+.barra {
     position: relative;
+}
+.green-bar{
     background-color: #ADFF2E;
 }
-
-.time p,
-.bar p {
+.time .green-bar,
+.barra .green-bar {
     position: absolute;
     border-radius: 20px;
-}
-.time:hover p {
-    width: 80px;
     border: 1px solid #ADFF2E;
-    margin-left: 22px;
-    margin-top: -1px;
-    cursor: pointer;
-}
-.bar:hover p{
-    width: 30px;
-    border: 1px solid #ADFF2E;
-    margin-right: 70px;
-    margin-top: -1px;
-    cursor: pointer;
 }
 
-.time i,
-.bar i {
+.time:hover .green-bar {
+    width: 80px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.barra:hover .green-bar{
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.time .cerchio,
+.barra .cerchio {
     position: absolute;
     height: 10px;
     width: 10px;
     border-radius: 50%;
 }
-.time:hover i {
+.time:hover .cerchio {
     background-color: white;
-    margin-left: 100px;
-    top: -5px;
+    margin-left: 120px;
     cursor: pointer;
 }
-.bar:hover i {
+.barra:hover .cerchio {
     background-color: white;
-    margin-left: 20px;
-    top: -5px;
+    margin-left: 40px;
     cursor: pointer;
 }
 /* fine footer center  */
