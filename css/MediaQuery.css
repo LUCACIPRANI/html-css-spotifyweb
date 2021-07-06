@@ -38,6 +38,9 @@
         min-width: 40%;
         margin-right: 5%;
     }
+    .circle h2{
+        margin-top: 8%;
+    }
     .element img{
         width: 180px;
         height: 180px;
@@ -168,6 +171,9 @@
     }
     .container h2{
         font-size: 1em;
+    }
+    .circle h2{
+        margin-top: 2%;
     }
     .element img{
         width: 140px;

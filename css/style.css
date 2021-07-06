@@ -49,8 +49,7 @@
 
 /* common  */
 
-
-/* inizio main  */
+/* inizio MAIN  */
 main {
     position:relative;
     height: calc(100vh - 90px);
@@ -72,12 +71,10 @@ main {
     display: flex;
     align-items: center;
 }
-
 .logo img {
     width: 65%;
     margin-left: 1em;
 }
-
 .logo-small{
     width: 30%;
     height: 30%;
@@ -94,8 +91,7 @@ main {
     padding-top: 0.6em;
     line-height: 1.5;
 }
-
-.menu ul {
+.menu ul{
     display: flex;
     flex-direction:column;
     color: #77797F;
@@ -103,18 +99,12 @@ main {
     font-size: 0.9em;
     line-height: 2;
 }
-
-.menu ul li {
-    color: #77797F;
-    list-style-type: none;
-    line-height: 2;
-    padding: 0.3em;
-    padding-left: 0.8em;
-    border-left: 3px solid black; 
-
+.menu ul li{
+    list-style-type:none;
+    padding:0.3em;
+    padding-left:0.8em;
 }
-
-.menu ul li:first-child {
+.menu ul li:first-child{
     color: white;
     border-left: 3px solid #ADFF2E;
 }
@@ -131,18 +121,16 @@ li span {
     height: calc(100% - 295px);
     min-height: 100px;
     color: white;
-    overflow-y:auto;
+    overflow: auto;
 }
-
-.item {
+.item{
     display: flex;
     align-items: center;
     color: #77797F;
     padding-bottom: 0.7em;
     padding-top: 0.7em;
 }
-
-.box-playlist {
+.box-playlist{
     height: 40px;
     width: 40px;
     background-color: gray;
@@ -152,46 +140,38 @@ li span {
     color: black;
     margin-right: 0.4em;
 }
-
-.playlist ul li {
+.playlist ul li{
     color: #77797F;
     font-weight: 600;
     font-size: 0.9em;
     list-style-type: none;
     line-height: 2.5;
+    overflow-y: auto;
 }
 
 /* account  */
 .account {
     height: 90px;
-}
-
+} 
 .install,
-.user{
+.user {
     border-bottom: 1px solid #77797F;
     width: 85%;
     margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 0.7em;
-    font-size: 12px;
+    padding: 1em 0 0.7em 0;
+    font-size: 0.8em;
     color: #77797F;
 }
-
-.install span{
-    font-weight: 700;
-    font-size: 1.1em;
-}
+.install span,
 .user span{
-    font-weight: 700;
-    font-size: 1.1em;
+    font-weight:700;
+    font-size:1.1em;
+}
+.user {
+    border: none;
     color: white;
 }
-
-.user{
-    border: none;
-}
-
-.user i{
+.user i {
     font-size: 25px;
     padding-right: 0.3em;
 }
@@ -202,38 +182,40 @@ li span {
     width: calc(100% - 230px);
     float: left;
     height: calc(100vh - 90px);
-    /* min-height: 150px; */
-    overflow-y: auto;
-    background-color: #141A22;
+    background-color:#141A22;
 }
-
-.upgrade{
+.upgrade {
     background: #080B13;
+    opacity: 0.6;
     min-height: 80px;
+    height: 80px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
-.icon-top {
+.icon-top{
     text-transform: uppercase;
     text-align: center;
     font-size: 0.7em;
     font-weight: 500;
     color: white;
     border: 1px solid white;
+    border-radius: 25px;
     padding: 0.9em;    
     width: 15%;
-    border-radius: 25px;
-    margin-right: 2%;
+    margin-right:2%;
 }
-
-.icon-top:hover{
+.icon-top:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
 /*  menu centrale nel main */
+.content-body{
+    overflow-y: auto;
+    height: calc(100% - 80px);
+}
+
 .menu-top {
     color: #77797F;
     margin: 0 auto;
@@ -242,43 +224,31 @@ li span {
     font-size: 0.8em;
     font-weight: 600;
 }
-
-.menu-top ul{
-    margin: 0 auto;
-    list-style-type: none;
-}
-
-.menu-top ul li{
+.menu-top ul li {
+    list-style-type:none;
     float: left;
-    float: left;
-    padding: 3px;
-    word-wrap: unset;
-    padding: 1em;
-    font-size: 0.9em;
+    padding: 0.9em;
 }
-
-.menu-top ul li p{
+.menu-top ul li p {
     border: 1px solid #ADFF2E;
     width: 35%;
     margin: 0 auto;
     margin-top: 2%;
 }
-
-.menu-top ul li:hover p{
-    transform: scale(1.5);
+.menu-top ul li:hover p {
+    transform:scale(1.5);
 }
-
-/* fine menu centrale nel main  */
 /* inizio containers */
 .container{
     color: white;
     padding: 0 1%;
 }
-
-.container h2{
+.container h2 {
     padding: 1em 0 1em 0.5em;
 }
-
+.circle h2{
+    margin-top: 15%;
+}
 .container p{
     padding-bottom: 1.2em;
     padding-left: 1em;
@@ -286,29 +256,32 @@ li span {
     font-weight: 700;
     color: #77797F;
 }
-
-.element{
+.element {
     float: left;
     padding-left: 0.5em;
     position: relative;
+    height: 200px;
+    flex-shrink: 1;
+}
+.longer {
     height: 280px;
 }
-
-.longer{
-    height: 280px;
-}
-
-.element i{
+.element i {
     display: none;
 }
-
-.element:hover i {
+.element:hover i{
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 55px;
     display: inline;
+}
+.element:hover .image{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .element img {
     width: 180px;
@@ -335,7 +308,7 @@ li span {
 }
 
 /* fine containers  */
-/* fine main  */
+/* fine MAIN  */
 
 /* inizio footer  */
 footer {
@@ -344,8 +317,7 @@ footer {
     z-index: 999;   
     bottom: 0;
 }
-
-.player {
+.player{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -361,7 +333,6 @@ footer {
     font-size: 0.6em;
     font-weight: 700;
     color: #77797F;
-    height: 100%;
 }
 .footer-left img {
     width: 70px;
@@ -372,7 +343,7 @@ footer {
     padding: 0.3em;
 }
 .melody span {
-    display: block;  /* manda a capo il testo */
+    display: block; 
     font-size: 1.2em;
     color: white;
 }
@@ -393,24 +364,6 @@ footer {
     border-radius: 5%;
     width: 50%;
 }
-
-/* .footer-right p{
-    position: absolute;
-    border: 1px solid #ADFF2E;
-    background-color: #ADFF2E;
-    border-radius: 20px;
-    width: 1%;
-    margin-right: 50px;
-}
-
-.bar i{
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    background-color: white;
-}
- */
-
 
 /* footer center  */
 .footer-center {
@@ -436,42 +389,68 @@ footer {
     position: relative;
     width: 90%;
 }
-
 .play i:nth-of-type(3) {
     font-size: 1.8em;
     cursor: pointer;
 }
-
 .play i:nth-of-type(3):hover {
     transform: scale(1.5);
 }
-
 .longer-bar{
     border: 1px solid white;
     background-color: white;
     border-radius: 20px;
     width: 80%;
 }
-
-.time p {
-    position: absolute;
-    border: 1px solid #ADFF2E;
-    background-color: #ADFF2E;
-    border-radius: 20px;
-    width: 15%;
-    margin: 10%;
-}
-.time i {
-    position: absolute;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    background-color: white;
-    margin: 25%;
-}
 .time span{
     font-size: 0.5em;
     font-weight: 700;
+}
+
+/* Hover verde per barre player  */
+.green-bar{
+    position: relative;
+    background-color: #ADFF2E;
+}
+
+.time p,
+.bar p {
+    position: absolute;
+    border-radius: 20px;
+}
+.time:hover p {
+    width: 80px;
+    border: 1px solid #ADFF2E;
+    margin-left: 22px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+.bar:hover p{
+    width: 30px;
+    border: 1px solid #ADFF2E;
+    margin-right: 70px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.time i,
+.bar i {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.time:hover i {
+    background-color: white;
+    margin-left: 100px;
+    top: -5px;
+    cursor: pointer;
+}
+.bar:hover i {
+    background-color: white;
+    margin-left: 20px;
+    top: -5px;
+    cursor: pointer;
 }
 /* fine footer center  */
 /* fine footer  */
