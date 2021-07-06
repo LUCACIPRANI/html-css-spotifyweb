@@ -347,6 +347,9 @@ footer {
     font-size: 1.2em;
     color: white;
 }
+.melody:hover {
+    color: white;
+}
 .icons {
     padding-left: 3em;
 }
